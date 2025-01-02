@@ -1,205 +1,321 @@
 <!DOCTYPE HTML>
-
 <html>
-	<head>
-		<meta property="og:image" content="images/Logo_new_adaptive.png" />
-		<meta property="og:description" content="Sharebeez app" />
-		<meta property="og:url" content="http://www.affirmtech.com/" />
-		<meta property="og:title" content="Sharebeez" />
-	
-		<title>Sharebeez</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Sharebeez - Community Sharing Made Easy</title>
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700&display=swap" rel="stylesheet">
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #0f2027, #1a2e35, #223744); /* Dark green gradient */
+            color: white;
+            overflow-x: hidden;
+        }
+        h2 {
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: #18bfef;
+        }
+        section {
+            padding: 3rem 1rem;
+        }
 
-				<!-- Intro -->
-					<div id="intro">
-						<h1>Welcome To <br />
-						Sharebeez</h1>
-						<p>We allow our users to share the happiness with our community by showing the latest deals like groupby, sharing cabs etc. <br />
-						Come Join our community by installing our Sharebeez app which is available for both android and IOS</p>
-						<ul class="actions">
-							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-						</ul>
-					</div>
+        /* Header Section */
+        header {
+            background: #12191f;
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        header .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            color: white;
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+        header .logo .icon {
+            font-size: 3rem;
+            color: #18bfef;
+        }
 
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">Sharebeez</a>
-					</header>
+        /* Intro Section */
+        #intro {
+            text-align: center;
+            padding: 4rem 1rem;
+            position: relative;
+        }
+        #intro h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        #intro p {
+            font-size: 1.2rem;
+            line-height: 1.8rem;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+        }
+        #intro .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        #intro .feature-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        #intro .feature-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+        }
+        #intro .feature-card i {
+            font-size: 2rem;
+            color: #18bfef;
+            margin-bottom: 1rem;
+        }
+        #intro .feature-card h3 {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        #intro .feature-card p {
+            font-size: 1rem;
+            color: #e1e1e1;
+        }
+        #intro .button {
+            background-color: #18bfef;
+            padding: 0.8rem 2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            margin-top: 2rem;
+            display: inline-block;
+        }
+        #intro .button:hover {
+            background-color: #146ba3;
+        }
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li class="active"><a href="index.html">Welcome to Sharebeez</a></li>
-							<li><a href="generic.html">Our Apps</a></li>
-							<li><a href="elements.html">Contact Us</a></li>
-						</ul>
-						<ul class="icons">
-							<li><a href="#" class="icon brands fa-twitter"><span class="label">Follow us on Twitter</span></a></li>
-							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-						</ul>
-					</nav>
+        /* Features Section */
+        #features {
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            text-align: center;
+        }
+        .features-container {
+            display: flex;
+            gap: 1.5rem;
+            overflow-x: auto;
+            padding: 2rem 0;
+            scroll-behavior: smooth;
+        }
+        .features-container:hover {
+            animation-play-state: paused;
+        }
+        .feature-card {
+            flex-shrink: 0;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 8px;
+            min-width: 250px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .feature-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
+        }
 
-				<!-- Main -->
-					<div id="main">
+        /* Visual Representation Section */
+        #visual {
+            background: #1e2a38;
+            text-align: center;
+            padding: 4rem 1rem;
+        }
+        #visual .carousel {
+            display: flex;
+            gap: 2rem;
+            overflow: hidden;
+            white-space: nowrap;
+            animation: scroll 10s linear infinite;
+        }
+        #visual .carousel img {
+            border-radius: 8px;
+            height: 200px;
+            display: inline-block;
+        }
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
 
-						<!-- Featured Post -->
-							<article class="post featured">
-								<header class="major">
-									<span class="date">November 24, 2022</span>
-									<h2><a href="#">Our Sharebeez app is ready for users in India and US<br />
-									</a></h2>
-									<p>Download now</p>
-								</header>
-								<a href="#" class="image main"><img src="images/Logo_new_adaptive.png" alt="" /></a>
-								<ul class="actions special">
-									<li><a href="#" class="button large">Full Story</a></li>
-								</ul>
-							</article>
+        /* Contact Section */
+        #contact {
+            background: #1e2a38;
+            padding: 3rem 1rem;
+            color: white;
+            text-align: center;
+        }
+        .contact-card {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .contact-card .card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 2rem;
+            min-width: 250px;
+            text-align: center;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .contact-card .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+        }
 
-						<!-- Posts -->
-							<section class="posts">
-								<article>
-									<header>
-										<span class="date">Nov 14, 2022</span>
-										<h2><a href="#">Sharebeez app hosted for test users in Android platform<br />
-										</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/Logo_new_adaptive.png" alt="" /></a>
-									<p>Got thumbs up from testers and we performed testing in many devices and we observed a great performance metrics from the app</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">Nov 28, 2022</span>
-										<h2><a href="#">We released next beta version with location access made easy<br />
-									</header>
-									<a href="#" class="image fit"><img src="images/Logo_new_adaptive.png" alt="" /></a>
-									<p>Got thumbs up from testers and we performed testing in many devices and we observed a great performance metrics from the app</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">Nov 14, 2022</span>
-										<h2><a href="#">Sharebeez app hosted for test users in Android platform<br />
-										</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/Logo_new_adaptive.png" alt="" /></a>
-									<p>Got thumbs up from testers and we performed testing in many devices and we observed a great performance metrics from the app</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">Nov 28, 2022</span>
-										<h2><a href="#">We released next beta version with location access made easy<br />
-									</header>
-									<a href="#" class="image fit"><img src="images/Logo_new_adaptive.png" alt="" /></a>
-									<p>Got thumbs up from testers and we performed testing in many devices and we observed a great performance metrics from the app</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul>
-								</article>
-								</article>
-								ß
-							</section>
+        /* Footer */
+        footer {
+            background: #12191f;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <span class="icon fas fa-bee"></span>
+            <span>Sharebeez</span>
+        </div>
+    </header>
 
-						<!-- Footer -->
-							<footer>
-								<div class="pagination">
-									<!--<a href="#" class="previous">Prev</a>-->
-									<a href="#" class="page active">1</a>
-									<a href="#" class="page">2</a>
-									<a href="#" class="page">3</a>
-									<span class="extra">&hellip;</span>
-									<a href="#" class="page">8</a>
-									<a href="#" class="page">9</a>
-									<a href="#" class="page">10</a>
-									<a href="#" class="next">Next</a>
-								</div>
-							</footer>
+    <!-- Intro Section -->
+    <div id="intro">
+        <h1>Unleash the Power of Sharing Deals!</h1>
+        <p>Sharebeez is your one-stop shop for discovering and sharing amazing deals within your local community. Whether you're looking to:</p>
+        <div class="features">
+            <div class="feature-card">
+                <i class="fas fa-users"></i>
+                <h3>Score Bulk Discounts</h3>
+                <p>Find exclusive deals on products when you buy in bulk with neighbors or friends.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-recycle"></i>
+                <h3>Repurpose and Resell</h3>
+                <p>Breathe new life into pre-loved items by finding them new homes within your community.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-hand-holding-usd"></i>
+                <h3>Rent Smarter</h3>
+                <p>Save money and resources by renting items you need instead of buying them.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-car"></i>
+                <h3>Coordinate Kid Care</h3>
+                <p>Make school pick-ups and drop-offs a breeze by connecting with parents in your area.</p>
+            </div>
+        </div>
+        <a href="#features" class="button">Explore Features</a>
+    </div>
 
-					</div>
+    <!-- Features Section -->
+    <section id="features">
+        <h2>Key Features</h2>
+        <div class="features-container">
+            <div class="feature-card">
+                <i class="fas fa-bullhorn"></i>
+                <h3>Easy Deal Sharing</h3>
+                <p>Post deals in seconds with a title, description, and location.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-users"></i>
+                <h3>Community Hives</h3>
+                <p>Create or join hives to discover amazing deals.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Location-Based Search</h3>
+                <p>Find deals conveniently located near you.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-comments"></i>
+                <h3>Secure Messaging</h3>
+                <p>Connect with users privately and securely.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-lock"></i>
+                <h3>Privacy First</h3>
+                <p>Your data is safe. Location is never shared without consent.</p>
+            </div>
+        </div>
+    </section>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<section>
-							<form method="post" action="#">
-								<div class="fields">
-									<div class="field">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field">
-										<label for="email">Email</label>
-										<input type="text" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="3"></textarea>
-									</div>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-							</form>
-						</section>
-						<section class="split contact">
-							<section class="alt">
-								<h3>Address</h3>
-								<p><strong> Affirm Technologies LLC</strong><br />
-									 23125 Bradford Green Sq, CARY, <br />
-									North Carolina 27519</p>
-							</section>
-							<section>
-								<h3>Phone</h3>
-								<p><a href="#">+1 (919) 638-3841</a></p>
-							</section>
-							<section>
-								<h3>Email</h3>
-								<p><a href="#">sharebeezapp@gmail.com</a></p>
-							</section>
-							<section>
-								<h3>Social</h3>
-								<ul class="icons alt">
-									<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</section>
-						</section>
-					</footer>
+    <!-- Visual Representation Section -->
+    <section id="visual">
+        <h2>Visual Representation</h2>
+        <div class="carousel">
+            <img src="images/promo/add.jpeg" alt="Promo Image 1">
+            <img src="image/promo/add1.jpeg" alt="Promo Image 2">
+         <img src="images/promo/add.jpeg" alt="Promo Image 1">
+            <img src="image/promo/add1.jpeg" alt="Promo Image 2">
+        </div>
+    </section>
 
-				<!-- Copyright -->
-					<div id="copyright">
-						<ul><li>&copy; Affirm Tech</li><li>Design: <a href="www.affirmtech.in">Affirm Technogies</a></li></ul>
-					</div>
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-card">
+            <div class="card">
+                <h3>Address</h3>
+                <p>23125 Bradford Green Sq, CARY,<br> North Carolina 27519</p>
+            </div>
+            <div class="card">
+                <h3>Phone</h3>
+                <p><a href="tel:+19196383841">+1 (919) 638-3841</a></p>
+            </div>
+            <div class="card">
+                <h3>Email</h3>
+                <p><a href="mailto:sharebeezapp@gmail.com">sharebeezapp@gmail.com</a></p>
+            </div>
+            <div class="card">
+                <h3>Follow Us</h3>
+                <p>
+                    <a href="#" class="icon brands fa-twitter">Twitter</a><br>
+                    <a href="#" class="icon brands fa-facebook">Facebook</a><br>
+                    <a href="#" class="icon brands fa-instagram">Instagram</a>
+                </p>
+            </div>
+        </div>
+    </section>
 
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+    <!-- Footer -->
+    <footer>
+        &copy; 2025 Sharebeez | Designed by Affirm Technologies
+    </footer>
+</body>
 </html>

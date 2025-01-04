@@ -6,8 +6,40 @@
     <title>Sharebeez - Community Sharing Made Easy</title>
     <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700&display=swap" rel="stylesheet">
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
     <style>
+
+        /* Fix FontAwesome Icons Alignment */
+.icon.brands i {
+    display: inline-block; /* Ensure inline-block alignment */
+    vertical-align: middle; /* Align icon with the text vertically */
+    margin-right: 10px; /* Add spacing between the icon and the text */
+    font-size: 1.2rem; /* Adjust the size of the icon */
+    color: #18bfef; /* Ensure the icon color matches the theme */
+    transition: color 0.3s;
+}
+
+.icon.brands:hover i {
+    color: #146ba3; /* Slightly darker shade on hover */
+}
+
+#contact .card a {
+    display: inline-flex; /* Align icon and text as a single unit */
+    align-items: center; /* Center icon and text vertically */
+    text-decoration: none; /* Remove underline from links */
+    font-size: 1.1rem; /* Adjust font size */
+    font-weight: bold; /* Make text bold */
+    color: #18bfef; /* Text color matches the theme */
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+#contact .card a:hover {
+    color: #146ba3; /* Hover effect for links */
+    text-shadow: 0px 2px 5px rgba(24, 191, 239, 0.8); /* Glow effect on hover */
+}
+
+        
         /* Enhanced Styles for Contact Section */
 #contact .card a {
     color: #18bfef; /* Matches theme accent color */
@@ -351,16 +383,23 @@
     </div>
     <div class="card">
         <h3>Email</h3>
-        <p><a href="mailto:sharebeezapp@gmail.com">sharebeezapp@gmail.com</a></p>
+        <p><a href="mailto:support@sharebeez.com">support@sharebeez.com</a></p>
     </div>
     <div class="card">
-        <h3>Follow Us</h3>
-        <p>
-            <a href="#" class="icon brands fa-twitter">Twitter</a><br>
-            <a href="#" class="icon brands fa-facebook">Facebook</a><br>
-            <a href="#" class="icon brands fa-instagram">Instagram</a>
-        </p>
-    </div>
+    <h3>Follow Us</h3>
+    <p>
+        <a href="#" class="icon brands fa-twitter">
+            <i class="fab fa-twitter"></i> Twitter
+        </a><br>
+        <a href="#" class="icon brands fa-facebook">
+            <i class="fab fa-facebook-f"></i> Facebook
+        </a><br>
+        <a href="#" class="icon brands fa-instagram">
+            <i class="fab fa-instagram"></i> Instagram
+        </a>
+    </p>
+</div>
+
 </div>
 
         </div>

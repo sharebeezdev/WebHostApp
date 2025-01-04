@@ -8,6 +8,57 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700&display=swap" rel="stylesheet">
 
     <style>
+        /* Enhanced Styles for Contact Section */
+#contact .card a {
+    color: #18bfef; /* Matches theme accent color */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+#contact .card a:hover {
+    color: #146ba3; /* Slightly darker shade for hover effect */
+    text-shadow: 0px 2px 5px rgba(24, 191, 239, 0.8); /* Adds a glowing effect */
+}
+
+#contact .card {
+    position: relative;
+    overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.2); /* Subtle border for more definition */
+}
+
+#contact .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(135deg, rgba(24, 191, 239, 0.1), rgba(20, 107, 163, 0.1));
+    opacity: 0;
+    z-index: 0;
+    transition: opacity 0.3s;
+}
+
+#contact .card:hover::before {
+    opacity: 1;
+}
+
+#contact .card h3 {
+    font-size: 1.5rem;
+    color: white;
+    z-index: 1;
+    position: relative;
+}
+
+#contact .card p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #e1e1e1;
+    z-index: 1;
+    position: relative;
+}
+
         /* General Styles */
         body {
             font-family: 'Inter', sans-serif;
@@ -290,26 +341,28 @@
     <section id="contact">
         <h2>Contact Us</h2>
         <div class="contact-card">
-            <div class="card">
-                <h3>Address</h3>
-                <p>23125 Bradford Green Sq, CARY,<br> North Carolina 27519</p>
-            </div>
-            <div class="card">
-                <h3>Phone</h3>
-                <p><a href="tel:+19196383841">+1 (919) 638-3841</a></p>
-            </div>
-            <div class="card">
-                <h3>Email</h3>
-                <p><a href="mailto:support@sharebeez.com">sharebeezapp@gmail.com</a></p>
-            </div>
-            <div class="card">
-                <h3>Follow Us</h3>
-                <p>
-                    <a href="#" class="icon brands fa-twitter">Twitter</a><br>
-                    <a href="#" class="icon brands fa-facebook">Facebook</a><br>
-                    <a href="#" class="icon brands fa-instagram">Instagram</a>
-                </p>
-            </div>
+    <div class="card">
+        <h3>Address</h3>
+        <p>23125 Bradford Green Sq, CARY,<br> North Carolina 27519</p>
+    </div>
+    <div class="card">
+        <h3>Phone</h3>
+        <p><a href="tel:+19196383841">+1 (919) 638-3841</a></p>
+    </div>
+    <div class="card">
+        <h3>Email</h3>
+        <p><a href="mailto:sharebeezapp@gmail.com">sharebeezapp@gmail.com</a></p>
+    </div>
+    <div class="card">
+        <h3>Follow Us</h3>
+        <p>
+            <a href="#" class="icon brands fa-twitter">Twitter</a><br>
+            <a href="#" class="icon brands fa-facebook">Facebook</a><br>
+            <a href="#" class="icon brands fa-instagram">Instagram</a>
+        </p>
+    </div>
+</div>
+
         </div>
     </section>
 
